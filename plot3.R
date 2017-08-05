@@ -11,7 +11,7 @@ table <- table[complete.cases(table),]
 
 ## Combine Date and Time column
 table$dateTime <- paste(table$Date, table$Time)
-table$dateTime <- as.POSIXct(dateTime)
+table$dateTime <- as.POSIXct(table$dateTime)
 
 plot(table$Sub_metering_1~table$dateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 lines(table$Sub_metering_2~table$dateTime,col='Red')
